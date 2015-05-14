@@ -28,7 +28,7 @@ nodecg.listenFor('tip', 'lfg-streamtip', callback);
 
 ### In other bundles' extensions
 If you want to use tip events in another bundle's extension,
-add `lfg-streamtip` as a `bundleDependency` in your bundle's [`nodecg.json`](https://github.com/nodecg/nodecg/wiki/nodecg.json)
+add `lfg-streamtip` as a `bundleDependency` in your bundle's [`nodecg.json`](http://nodecg.com/guide/nodecg.json.html)
 
 Then add the following code:
 ```javascript
