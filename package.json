@@ -1,6 +1,6 @@
 {
   "name": "lfg-streamtip",
   "dependencies": {
-    "streamtip-listener": "^1.3.0"
+    "streamtip-listener": "^1.3.1"
   }
 }
