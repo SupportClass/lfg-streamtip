@@ -1,0 +1,6 @@
+{
+  "name": "lfg-streamtip",
+  "dependencies": {
+    "paper-button": "PolymerElements/paper-button#~1.0.3"
+  }
+}

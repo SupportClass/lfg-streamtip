@@ -1,6 +1,24 @@
 {
   "name": "lfg-streamtip",
+  "version": "0.0.1",
+  "homepage": "http://supportclass.net/",
+  "authors": [
+    "Alex Van Camp <email@alexvan.camp>"
+  ],
+  "description": "StreamTip integration",
+  "license": "MIT",
   "dependencies": {
     "streamtip-listener": "^1.3.2"
+  },
+  "nodecg": {
+    "compatibleRange": "~0.7.0",
+    "dashboardPanels": [
+      {
+        "name": "tip-stats",
+        "title": "Tip Stats",
+        "width": 2,
+        "file": "panel.html"
+      }
+    ]
   }
 }
