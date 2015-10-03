@@ -16,6 +16,20 @@
         "title": "Tip Stats",
         "width": 2,
         "file": "panel.html"
+      },
+      {
+        "name": "reset-daily",
+        "title": "Reset Daily",
+        "width": 2,
+        "file": "reset-daily.html",
+        "dialog": true
+      },
+      {
+        "name": "reset-monthly",
+        "title": "Reset Monthly",
+        "width": 2,
+        "file": "reset-monthly.html",
+        "dialog": true
       }
     ]
   }
