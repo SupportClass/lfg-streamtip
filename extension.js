@@ -39,6 +39,7 @@ module.exports = function(nodecg) {
         // We got a new tip.
         // 'tip' is an object which matches the description given on the Streamtip API page
         emitter.emit('tip', tip);
+        nodecg.sendMessage('tip', tip);
     });
 
     listener.on('newTop', function(period, tip) {
