@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="stylesheet" href="components/paper-styles/paper-styles.html">
+    <link rel="import" href="components/paper-button/paper-button.html">
+    <style>
+        paper-button {
+            margin-top: 8px;
+            margin-bottom: 0;
+            display: block;
+        }
+
+        .column {
+            margin: 0 4px;
+            flex: 1;
+        }
+
+        .column > span {
+            display: block;
+        }
+
+        .amount {
+            font-weight: bold;
+            font-size: 200%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .username {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+<div style="display: flex; text-align: center">
+    <div id="daily" class="column">
+        <h4>DAY TOP</h4>
+        <span class="amount">?</span>
+        <span class="username">?</span>
+        <paper-button nodecg-dialog="reset-daily" raised>Reset</paper-button>
+    </div>
+    <div id="monthly" class="column">
+        <h4>MONTH TOP</h4>
+        <span class="amount">?</span>
+        <span class="username">?</span>
+        <paper-button nodecg-dialog="reset-monthly" raised>Reset</paper-button>
+    </div>
+</div>
+<script>
+    (function () {
+        var dayAmount = document.querySelector('#daily .amount');
+        var dayUsername = document.querySelector('#daily .username');
+        var monthAmount = document.querySelector('#monthly .amount');
+        var monthUsername = document.querySelector('#monthly .username');
+
+        nodecg.Replicant('tops')
+            .on('change', function(oldVal, newVal) {
+                if (!newVal) return;
+
+                var dayamt = '$0';
+                var dayusr = 'N/A';
+                var monthamt = '$0';
+                var monthusr = 'N/A';
+                var dayTopTip = newVal.daily;
+                var monthTopTip = newVal.monthly;
+
+                if (dayTopTip && dayTopTip.cents > 0) {
+                    dayamt = dayTopTip.currencySymbol + dayTopTip.amount;
+                    dayusr = dayTopTip.username;
+                }
+
+                if (monthTopTip && monthTopTip.cents > 0) {
+                    monthamt = monthTopTip.currencySymbol + monthTopTip.amount;
+                    monthusr = monthTopTip.username;
+                }
+
+                dayAmount.innerHTML = dayamt;
+                dayAmount.setAttribute('title', dayamt);
+                dayUsername.innerHTML = dayusr;
+                dayUsername.setAttribute('title', dayusr);
+
+                monthAmount.innerHTML = monthamt;
+                monthAmount.setAttribute('title', monthamt);
+                monthUsername.innerHTML = monthusr;
+                monthUsername.setAttribute('title', monthusr);
+            });
+    })();
+</script>
+
+</body>
+</html>

@@ -19,7 +19,7 @@ module.exports = function(nodecg) {
         clientId: nodecg.bundleConfig.clientId,
         accessToken: nodecg.bundleConfig.accessToken
     });
-    var tops = nodecg.Replicant('tops', { defaultValue: {}, persistent: false });
+    var tops = nodecg.Replicant('tops', {defaultValue: {}});
 
     listener.on('connected', function() {
         nodecg.log.info('Connected to StreamTip');

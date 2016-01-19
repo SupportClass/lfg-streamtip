@@ -1,6 +1,37 @@
 {
   "name": "lfg-streamtip",
+  "version": "0.0.1",
+  "homepage": "http://supportclass.net/",
+  "author": "Alex Van Camp <email@alexvan.camp>",
+  "description": "StreamTip integration",
+  "license": "MIT",
   "dependencies": {
-    "streamtip-listener": "^1.3.2"
+    "streamtip-listener": "^1.3.3"
+  },
+  "nodecg": {
+    "compatibleRange": "~0.7.0",
+    "dashboardPanels": [
+      {
+        "name": "tip-stats",
+        "title": "Tip Stats",
+        "width": 2,
+        "headerColor": "#564573",
+        "file": "panel.html"
+      },
+      {
+        "name": "reset-daily",
+        "title": "Reset Daily",
+        "width": 2,
+        "file": "reset-daily.html",
+        "dialog": true
+      },
+      {
+        "name": "reset-monthly",
+        "title": "Reset Monthly",
+        "width": 2,
+        "file": "reset-monthly.html",
+        "dialog": true
+      }
+    ]
   }
 }
