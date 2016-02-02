@@ -21,16 +21,36 @@
       {
         "name": "reset-daily",
         "title": "Reset Daily",
-        "width": 2,
+        "width": 3,
         "file": "reset-daily.html",
-        "dialog": true
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "Yes, reset",
+            "type": "confirm"
+          },
+          {
+            "name": "No, do not reset",
+            "type": "dismiss"
+          }
+        ]
       },
       {
         "name": "reset-monthly",
         "title": "Reset Monthly",
-        "width": 2,
+        "width": 3,
         "file": "reset-monthly.html",
-        "dialog": true
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "Yes, reset",
+            "type": "confirm"
+          },
+          {
+            "name": "No, do not reset",
+            "type": "dismiss"
+          }
+        ]
       }
     ]
   }

@@ -3,32 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <script src="components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link rel="stylesheet" href="components/paper-styles/paper-styles.html">
-    <link rel="import" href="components/paper-button/paper-button.html">
-    <style>
-        paper-button {
-            margin-top: 8px;
-            margin-bottom: 0;
-            display: block;
-        }
-    </style>
 </head>
 <body>
-"Monthly" and "Daily" are not automatically determined. They only reset when you explicitly tell them to.
-<p>
-    Are you sure you wish to reset daily top donator?
-</p>
+    <p>
+        "Monthly" and "Daily" are not automatically determined. They only reset when you explicitly tell them to.
+    </p>
 
-<paper-button id="reset" raised>Yes, reset</paper-button>
-<script>
+    <p>
+        Are you sure you wish to reset daily top donator?
+    </p>
+
+    <script>
     (function () {
-        var resetBtn = document.querySelector('#reset');
-        resetBtn.addEventListener('click', function() {
+        document.addEventListener('dialog-confirmed', function() {
             nodecg.sendMessage('resetPeriod', 'daily');
         });
     })();
-</script>
-
+    </script>
 </body>
 </html>
