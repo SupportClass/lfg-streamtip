@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+	<meta charset="UTF-8">
 </head>
 <body>
-    <p>
-        "Monthly" and "Daily" are not automatically determined. They only reset when you explicitly tell them to.
-    </p>
+	<p>
+		"Monthly" and "Daily" are not automatically determined. They only reset when you explicitly tell them to.
+	</p>
 
-    <p>
-        Are you sure you wish to reset daily top donator?
-    </p>
+	<p>
+		Are you sure you wish to reset daily top donator?
+	</p>
 
-    <script>
-    (function () {
-        document.addEventListener('dialog-confirmed', function() {
-            nodecg.sendMessage('resetPeriod', 'daily');
-        });
-    })();
-    </script>
+	<script>
+		(function () {
+			document.addEventListener('dialog-confirmed', function () {
+				nodecg.sendMessage('resetPeriod', 'daily');
+			});
+		})();
+	</script>
 </body>
 </html>
