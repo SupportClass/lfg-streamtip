@@ -4,6 +4,8 @@ This is a [NodeCG](http://github.com/nodecg/nodecg) bundle.
 Listens for tips to a given account on [StreamTip](https://streamtip.com/) and emits API events for other bundles to use.
 Also displays stats on the dashboard and easily allows the user to reset said stats.
 
+This bundle integrates with [`lfg-nucleus`](https://github.com/SupportClass/lfg-nucleus).
+
 ## Installation
 - Install to `nodecg/bundles/lfg-streamtip`
 - Create `nodecg/cfg/lfg-streamtip.json` with the `clientId` and `accessToken` of the 
