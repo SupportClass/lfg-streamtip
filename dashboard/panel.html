@@ -11,8 +11,11 @@
 			display: block;
 		}
 
+		h4 {
+			margin-bottom: 0;
+		}
+
 		.column {
-			margin: 0 4px;
 			flex: 1;
 		}
 
@@ -23,31 +26,33 @@
 		.amount {
 			font-weight: bold;
 			font-size: 200%;
-			overflow: hidden;
-			text-overflow: ellipsis;
 		}
 
-		.username {
+		.username,
+		.amount {
 			overflow: hidden;
 			text-overflow: ellipsis;
+			max-width: 117px;
 		}
 	</style>
 </head>
 <body>
 	<div style="display: flex; text-align: center">
-		<div id="daily" class="column">
+		<div id="daily" class="column" style="margin-right: 4px;">
 			<h4>DAY TOP</h4>
 			<span class="amount">?</span>
 			<span class="username">?</span>
 			<paper-button nodecg-dialog="reset-daily" class="nodecg-configure" raised>Reset</paper-button>
 		</div>
-		<div id="monthly" class="column">
+
+		<div id="monthly" class="column" style="margin-left: 4px;">
 			<h4>MONTH TOP</h4>
 			<span class="amount">?</span>
 			<span class="username">?</span>
 			<paper-button nodecg-dialog="reset-monthly" class="nodecg-configure" raised>Reset</paper-button>
 		</div>
 	</div>
+
 	<script>
 		(function () {
 			var dayAmount = document.querySelector('#daily .amount');
