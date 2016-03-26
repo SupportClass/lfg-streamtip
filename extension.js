@@ -51,16 +51,18 @@ module.exports = function(nodecg) {
         nodecg.log.error('Error! %s', err.message);
     });
 
-    nodecg.listenFor('resetPeriod', function(period) {
-        if (tops.value[period]) {
-            try {
-                listener.resetTop(period);
-            } catch(err) {
-                nodecg.log.error('resetPeriod error! %s', err.message);
-            }
-            tops.value[period] = {};
-        }
-    });
+    nodecg.listenFor('resetPeriod', emitter.resetPeriod);
+
+	emitter.resetPeriod = function(period) {
+		if (tops.value[period]) {
+			try {
+				listener.resetTop(period);
+			} catch(err) {
+				nodecg.log.error('resetPeriod error! %s', err.message);
+			}
+			tops.value[period] = {};
+		}
+	};
 
     return emitter;
 };
