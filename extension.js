@@ -51,8 +51,6 @@ module.exports = function(nodecg) {
         nodecg.log.error('Error! %s', err.message);
     });
 
-    nodecg.listenFor('resetPeriod', emitter.resetPeriod);
-
 	emitter.resetPeriod = function(period) {
 		if (tops.value[period]) {
 			try {
@@ -63,6 +61,8 @@ module.exports = function(nodecg) {
 			tops.value[period] = {};
 		}
 	};
+
+	nodecg.listenFor('resetPeriod', emitter.resetPeriod);
 
     return emitter;
 };
