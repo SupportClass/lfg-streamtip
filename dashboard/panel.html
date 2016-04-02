@@ -53,46 +53,7 @@
 		</div>
 	</div>
 
-	<script>
-		(function () {
-			var dayAmount = document.querySelector('#daily .amount');
-			var dayUsername = document.querySelector('#daily .username');
-			var monthAmount = document.querySelector('#monthly .amount');
-			var monthUsername = document.querySelector('#monthly .username');
-
-			nodecg.Replicant('tops')
-					.on('change', function (oldVal, newVal) {
-						if (!newVal) return;
-
-						var dayamt = '$0';
-						var dayusr = 'N/A';
-						var monthamt = '$0';
-						var monthusr = 'N/A';
-						var dayTopTip = newVal.daily;
-						var monthTopTip = newVal.monthly;
-
-						if (dayTopTip && dayTopTip.cents > 0) {
-							dayamt = dayTopTip.currencySymbol + dayTopTip.amount;
-							dayusr = dayTopTip.username;
-						}
-
-						if (monthTopTip && monthTopTip.cents > 0) {
-							monthamt = monthTopTip.currencySymbol + monthTopTip.amount;
-							monthusr = monthTopTip.username;
-						}
-
-						dayAmount.innerHTML = dayamt;
-						dayAmount.setAttribute('title', dayamt);
-						dayUsername.innerHTML = dayusr;
-						dayUsername.setAttribute('title', dayusr);
-
-						monthAmount.innerHTML = monthamt;
-						monthAmount.setAttribute('title', monthamt);
-						monthUsername.innerHTML = monthusr;
-						monthUsername.setAttribute('title', monthusr);
-					});
-		})();
-	</script>
+	<script src="panel.js"></script>
 
 </body>
 </html>

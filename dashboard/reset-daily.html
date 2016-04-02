@@ -14,7 +14,7 @@
 
 	<script>
 		(function () {
-			document.addEventListener('dialog-confirmed', function () {
+			document.addEventListener('dialog-confirmed', () => {
 				nodecg.sendMessage('resetPeriod', 'daily');
 			});
 		})();
