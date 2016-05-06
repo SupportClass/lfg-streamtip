@@ -40,7 +40,7 @@ module.exports.compareTops = function (tip, tops) {
 	const ret = {monthly: null, daily: null};
 
 	Object.keys(tops).forEach(period => {
-		if (!tops[period] || tip.cents > tops[period].cents) {
+		if (!tops[period].cents || tip.cents > tops[period].cents) {
 			ret[period] = tip;
 		}
 	});
