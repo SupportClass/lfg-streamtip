@@ -7,7 +7,7 @@
 	const monthUsername = document.querySelector('#monthly .username');
 
 	nodecg.Replicant('tops')
-		.on('change', (oldVal, newVal) => {
+		.on('change', newVal => {
 			if (!newVal) {
 				return;
 			}
