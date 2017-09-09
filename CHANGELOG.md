@@ -1,3 +1,23 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/SupportClass/lfg-streamtip/compare/v1.0.0...v2.0.0) (2017-09-09)
+
+
+### Bug Fixes
+
+* improve margins on "reset" dialogs ([15c8ea6](https://github.com/SupportClass/lfg-streamtip/commit/15c8ea6))
+
+
+### Code Refactoring
+
+* port to NodeCG v0.9 ([23821b](https://github.com/SupportClass/lfg-streamtip/commit/23821b))
+
+
+### BREAKING CHANGES
+
+* no longer supports NodeCG v0.8
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/SupportClass/lfg-streamtip/compare/v0.1.0...v1.0.0) (2016-06-23)
 
