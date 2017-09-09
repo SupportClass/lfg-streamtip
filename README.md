@@ -1,4 +1,4 @@
-#lfg-streamtip [![Build Status](https://travis-ci.org/SupportClass/lfg-streamtip.svg?branch=master)](https://travis-ci.org/SupportClass/lfg-streamtip)
+# lfg-streamtip [![Build Status](https://travis-ci.org/SupportClass/lfg-streamtip.svg?branch=master)](https://travis-ci.org/SupportClass/lfg-streamtip)
 This is a [NodeCG](http://github.com/nodecg/nodecg) bundle.
 
 Listens for tips to a given account on [StreamTip](https://streamtip.com/) and emits API events for other bundles to use.
